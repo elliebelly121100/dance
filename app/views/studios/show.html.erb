@@ -1,0 +1,18 @@
+<h1>Studio #<%= @studio.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @studio.name %></p>
+</div>
+<div>
+  <% @studio.reviews.each do |review| %>
+  <h1>Reviews</h1>:<br />
+  <h3>Author of review:</h3>
+  <p><%= review.user %></p>
+  <h3>Review:</h3>
+      <p><%= review.text %></p>
+      <% end %>
+</div>
+
+<a href="/studios/<%= @studio.id %>/edit">Edit</a> |
+<a href="/studios/<%= @studio.id %>/destroy">Destroy</a>

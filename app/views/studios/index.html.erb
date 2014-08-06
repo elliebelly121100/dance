@@ -1,0 +1,30 @@
+<h1>Studios</h1>
+
+<p><a href="/new_studio">Add a New Studio</a></p>
+
+<table>
+
+  <tbody>
+  <% @studios.each do |studio| %>
+    <tr><th>ID</th></tr>
+      <tr><td><%= studio.id %></td></tr>
+    <tr><th>Name</th></tr>
+    <tr><td><%= studio.name %></td></tr>
+    <tr>
+      <th>Reviews</th>
+    </tr>
+      <% studio.reviews.each do |review| %>
+    <tr>
+      <td><%= review.text %></td>
+    </tr>
+      <% end %>
+
+     <tr><td><a href="/studios/<%= studio.id %>">Show</a> | 
+      <a href="/studios/<%= studio.id %>/edit">Edit</a> | 
+      <a href="/studios/<%= studio.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+
+  </tbody>
+</table>
+

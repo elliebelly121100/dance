@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>Dancing4Ever</title>
+  <title>Dance</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="login">
+  <% if session['username'] %>
+      You're signed in, <%= session['username'] %>
+      <a href="/sessions/destroy">Sign Out</a>
+  <% else %>
+  <a href="/sessions/new">Sign in</a>
+      <a href="/new_user">Sign Up</a>
+      <% end %>
+</div>
+  <h1 class = "logo"> Dancing4Ever <img class = "shoes" src = "http://cdn.dancemania.biz/images/T/airabesque-leather-ballet-shoe-small.jpg"> 
+  </h1>
+  <nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home">HOME</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href='/tap'>Tap</a></li>
+        <li><a href='/jazz'>Jazz</a></li>
+        <li><a href='/contemporary'>Contemporary </a></li>
+        <li><a href='/modern'>Modern </a></li>
+        <li><a href='/ballet'>Ballet </a></li>
+        <li><a href='/reviews'>User Reviews </a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-search">
+      </span>
+    </span>
+  <form action="/search" >
+    <input type="text" name="search" id="search" class="form-control" placeholder="Search Your Location" >
+  </form>
+</div>
+  
+    <% if flash[:notice] %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if session['uid'] %>
+        <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+        <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
+      <% end %>
+
+
+<%= yield %>
+
+</body>
+</html>

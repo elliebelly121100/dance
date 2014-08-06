@@ -1,0 +1,43 @@
+.logo {
+  font-family:"Brush Script MT", cursive;
+}
+
+.shoes {
+  width: 50px
+}
+
+.container {
+  padding-top:50px;
+  text-align: center;
+}
+
+
+
+.centered {
+  text-align:center;
+  font-family:"impact";
+}
+
+.centered2 {
+  text-align:center;
+}
+
+.login {
+  text-align:right;
+}
+
+.list {
+  list-style-type:none;
+}
+
+.sidebar {
+    position:absolute;
+    left:30px; top:230px; bottom: 0;
+    width: 200px;
+  margin-bottom:40px;
+  text-align:left;
+}
+
+.imgcaption {
+  padding-top:30px
+}

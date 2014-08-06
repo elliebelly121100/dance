@@ -1,0 +1,11 @@
+<h1>Hi, <%= session['username'] %> </h1>
+
+<p>Who are you?</p>
+<form>
+  <form action="/user_create">
+  <label for="username">Username</label>
+  <input id="username" input type="text" name="username">
+  <input type="submit">
+</form>
+  
+  <a href="/sign_out">Sign Out</a>

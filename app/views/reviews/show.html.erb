@@ -1,0 +1,22 @@
+<h1>Review #<%= @review.id %></h1>
+
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @review.user.name %></p>
+</div>
+<div>
+  <strong>Text</strong>:<br />
+  <p><%= @review.text %></p>
+</div>
+<div>
+  <strong>Rating</strong>:<br />
+  <p><%= @review.rating %>/10</p>
+</div>
+<div>
+  <strong>Studio</strong>:<br />
+  <p><%= @review.studio.name %></p>
+</div>
+
+
+<a href="/reviews/<%= @review.id %>/edit">Edit</a> |
+<a href="/reviews/<%= @review.id %>/destroy">Destroy</a>
