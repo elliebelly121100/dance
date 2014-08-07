@@ -12,16 +12,17 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
+    @user = User.new(params[:user])
+    @user.img = params[:img]
     @user.name = params[:name]
     @user.bio = params[:bio]
     @user.password = params[:password]
     @user.password_confirmation = params[:password_confirmation]
     
 
-    if @user.save
+   if @user.save
       redirect_to "/users/#{ @user.id }", :notice => "User created."
-      else
+    else
       redirect_to "/new_user", :notice => @user.errors.full_messages.join(' ')
     end
   end
@@ -36,10 +37,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
+    @user.img = params[:img]
     @user.name = params[:name]
     @user.bio = params[:bio]
     @user.password = params[:password]
-    @user.password_confirmation = params[:password_confirmation]
+    @user.password = params[:password_confirmation]
+    
 
     if @user.save
       redirect_to "/users/#{ @user.id }", :notice => "User updated."
@@ -57,6 +60,5 @@ class UsersController < ApplicationController
       redirect_to "/users", :notice => "Can't destroy #{@user.name}"
     end
   end
-
 
 end

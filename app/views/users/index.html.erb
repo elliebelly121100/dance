@@ -16,6 +16,10 @@
   <tbody>
   <% @users.each do |user| %>
     <tr>
+      <th>Picture</th>
+      <td><img class="profile"src="<%= user.img %>"><td>
+      </tr>
+    <tr>
       <th>Email</th>
       <td><%= user.name %><td>
       </tr>

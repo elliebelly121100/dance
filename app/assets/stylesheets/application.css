@@ -11,8 +11,6 @@
   text-align: center;
 }
 
-
-
 .centered {
   text-align:center;
   font-family:"impact";
@@ -39,5 +37,24 @@
 }
 
 .imgcaption {
-  padding-top:30px
+  padding-top:30px;
+    padding-left:120px;
+}
+
+.image {
+  padding-left:140px;
+}
+
+.maintitle {
+  font-family:impact;
+}
+
+.titleimage {
+  height:400px;
+  width:940px;
+}
+
+.profile {
+  width:100px;
+    height:100px;
 }

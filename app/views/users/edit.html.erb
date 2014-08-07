@@ -2,6 +2,10 @@
 
 <form action="/users/<%= @user.id %>/update">
   <div>
+    <label for="img">Image URL</label><br />
+    <input id="img" name="img" value="<%= @user.img  %>" type="url" />
+  </div>
+  <div>
     <label for="name">Name</label><br />
     <input id="name" name="name" value="<%= @user.name  %>" type="text" />
   </div>

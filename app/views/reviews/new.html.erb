@@ -1,14 +1,16 @@
 <h1>New Review</h1>
 
 <form action="/create_review">
+  
+  
   <div>
-    <label for="user_id">user_id</label><br />
-    <input id="user_id" name="user_id" type="text" />
-  </div>
-    <div>
-    <label for="studio_id">studio_id</label><br />
-    <input id="studio_id" name="studio_id" type="text" />
-  </div>
+    <label for="studio_id">studio</label><br />
+    <select name="studio_id">
+      <% @studios.each do |studio| %>
+      <option value="<%= studio.id %>"><%= studio.name %></option>
+      <% end %>
+  </select>
+   </div>
   <div>
     <label for="text">text</label><br />
     <input id="text" name="text" type="text" />

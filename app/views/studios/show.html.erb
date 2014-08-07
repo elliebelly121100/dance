@@ -1,14 +1,14 @@
 <h1>Studio #<%= @studio.id %></h1>
 
 <div>
-  <strong>Name</strong>:<br />
+  <h3>Name</h3>:<br />
   <p><%= @studio.name %></p>
 </div>
 <div>
   <% @studio.reviews.each do |review| %>
   <h1>Reviews</h1>:<br />
   <h3>Author of review:</h3>
-  <p><%= review.user %></p>
+  <p><%= review.user.name %></p>
   <h3>Review:</h3>
       <p><%= review.text %></p>
       <% end %>
