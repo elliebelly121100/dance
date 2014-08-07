@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807144236) do
+ActiveRecord::Schema.define(version: 20140804191647) do
 
   create_table "reviews", force: true do |t|
     t.integer  "user_id"
     t.string   "text"
     t.integer  "rating"
+    t.integer  "studio_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "studio_id"
   end
 
   create_table "studios", force: true do |t|
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20140807144236) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "bio"
+    t.string   "img"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest"
-    t.string   "img"
   end
 
 end
