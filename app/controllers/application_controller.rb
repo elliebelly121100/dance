@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       @user = User.find_by(id: params[:id])
       user = User.find_by(name: session['username'])
     if user.blank?
-      redirect_to('/home')
+      redirect_to('/')
     end
   end
   

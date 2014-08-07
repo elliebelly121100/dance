@@ -14,7 +14,7 @@ Rails.application.routes.draw do
  
   #------------------------------
   #Pages
-  get '/home' => 'application#home'
+   root to: 'application#home'
   get '/ballet' => 'application#ballet'
     get '/jazz' => 'application#jazz'
   get '/contemporary' => 'application#contemporary'

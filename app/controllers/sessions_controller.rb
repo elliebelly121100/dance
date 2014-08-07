@@ -7,7 +7,7 @@ class  SessionsController < ApplicationController
     u = User.find_by_name(params['username'])
     if u && u.authenticate(params['password'])
       session['username'] = params['username']
-      redirect_to '/home'
+      redirect_to '/'
     else
       redirect_to '/sessions/new'
     end
