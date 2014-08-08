@@ -1,28 +1,15 @@
-== README
+# This app will let you find dance studios, find out abut types of dance, and review dance studios!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# User stories
 
-Things you may want to cover:
+#Girl wants to join dance. 
+#She opens the app and clicks on the various pages to decide what types of dance sound good to her. 
+#She decides quickly and easily after reading each page.
 
-* Ruby version
+#Girl wants to sign up for dance classes. 
+#She clicks on the pages for each style and finds a studio that sounds good within the category she wants to sign up for and clicks the link. 
+#She is transferred to the website of that studio and signs up within that page.
 
-* System dependencies
+#Dance teacher wants to teach her students more about dance. 
+#She clicks links which take her to various PDF files about each style of dance, and prints copies for her students.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
